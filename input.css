@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#menu-btn > span {
+  @apply transition duration-200;
+}
+
+#menu-btn.open > span {
+  @apply bg-white;
+}
+
+#menu-btn.open > span:nth-of-type(1) {
+  @apply translate-y-2 rotate-45;
+}
+
+#menu-btn.open > span:nth-of-type(2) {
+  @apply opacity-0;
+}
+
+#menu-btn.open > span:nth-of-type(3) {
+  @apply -translate-y-2 -rotate-45;
+}
